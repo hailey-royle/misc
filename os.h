@@ -1,0 +1,13 @@
+#if defined(_WIN32)
+        #define OS_WINDOWS 1
+
+#elif defined(__gnu_linux__) || defined(__linux__)
+        #define OS_LINUX 1
+
+#elif defined(__APPLE__) && defined(__MACH__)
+        #define OS_MAC 1
+
+#else
+        #error Unknown operating system.
+#endif
+
